@@ -8,7 +8,7 @@ chat_history = []
 
 @app.route('/')
 def home():
-    return 'index.html'
+    return index.html
 
 @app.route('/api/chat', methods=['POST'])
 def chat():
