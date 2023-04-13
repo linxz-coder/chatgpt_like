@@ -1,14 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import openai
 
 app = Flask(__name__, static_url_path='/static')
-openai.api_key = "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" # you can get it from https://platform.openai.com/account/api-keys
+openai.api_key = "your api key" # you can get it from https://platform.openai.com/account/api-keys
 chat_history = []
 
 
 @app.route('/')
 def home():
-    return index.html
+    return render_template('index.html')
 
 @app.route('/api/chat', methods=['POST'])
 def chat():
