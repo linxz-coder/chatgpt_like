@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import openai
 
 app = Flask(__name__, static_url_path='/static')
@@ -8,7 +8,7 @@ chat_history = []
 
 @app.route('/')
 def home():
-    return index.html
+    return render_template('index.html')
 
 @app.route('/api/chat', methods=['POST'])
 def chat():
