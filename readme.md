@@ -6,7 +6,7 @@
 1.**安装所需依赖项**  
 terminal 输入：
 ``` 
-pip install -r requirements
+pip install -r requirements.txt
 ```
 <br>
 
